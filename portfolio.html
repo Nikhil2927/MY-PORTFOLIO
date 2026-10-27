@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikhil | Personal Portfolio</title>
+  
+  <!-- Google Fonts for Modern & Aesthetic Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+
+  <!-- =====================================================================
+       PURE CSS INTERACTIVE TOGGLE
+       Controls opening of the portfolio with sleek animation without extra JS files.
+       ===================================================================== -->
+  <input type="checkbox" id="open-portfolio-toggle" class="open-checkbox" aria-label="Toggle portfolio visibility" />
+
+  <!-- =====================================================================
+       1. WELCOME / INTRO SCREEN (Before pressing Open)
+       ===================================================================== -->
+  <div class="welcome-overlay">
+    <!-- Ambient glowing backdrop orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <div class="welcome-box">
+      <div class="status-pill">
+        <span class="pulse-dot"></span>
+        <span>Portfolio Edition • 2026</span>
+      </div>
+
+      <h1 class="welcome-headline">
+        Curious Mind.<br />
+        <span class="gradient-text">Passionate Builder.</span><br />
+        Dedicated Athlete.
+      </h1>
+
+      <p class="welcome-subtext">
+        Welcome to my personal corner of the web. Explore my academic journey, athletic milestones, technical skills, and beginner creations.
+      </p>
+
+      <!-- The Open Button -->
+      <label for="open-portfolio-toggle" class="open-portal-btn" id="open-btn">
+        <span class="btn-shine"></span>
+        <span class="btn-text">Open Portfolio</span>
+        <span class="btn-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </span>
+      </label>
+
+      <span class="btn-hint">Click the button to enter full experience</span>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MAIN PORTFOLIO WRAPPER (Revealed on Open)
+       ===================================================================== -->
+  <div class="portfolio-container">
+
+    <!-- FLOATING NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="nav-content">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-avatar">
+            <img src="profile.jpg" alt="Nikhil" />
+          </span>
+          <span class="brand-name">Nikhil<span class="accent-dot">.</span></span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#achievements" class="nav-link">Achievements</a>
+          <a href="#sports" class="nav-link sports-highlight-link">Sports 🏆</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link nav-contact-btn">Contact</a>
+        </nav>
+
+        <!-- Toggle back to intro if user wants to see animation again -->
+        <label for="open-portfolio-toggle" class="replay-intro-btn" title="Replay Opening Screen">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+            <path d="M3 3v5h5"></path>
+          </svg>
+          <span class="replay-label">Intro</span>
+        </label>
+      </div>
+    </header>
+
+    <!-- ===================================================================
+         2. FULL SCREEN HERO SECTION (Photo + Name + Aesthetic Showcase)
+         =================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-background-shapes">
+        <div class="hero-glow glow-cyan"></div>
+        <div class="hero-glow glow-purple"></div>
+        <div class="hero-glow glow-gold"></div>
+      </div>
+
+      <div class="hero-container">
+        
+        <!-- Left / Top: Aesthetic Photo Card with glowing aura -->
+        <div class="hero-image-wrapper">
+          <div class="photo-card-frame">
+            <div class="photo-glow-ring"></div>
+            <!-- User photo -->
+            <img src="profile.jpg" alt="Nikhil - First Year Student" class="hero-photo" />
+            
+            <!-- Floating badge on photo -->
+            <div class="photo-floating-badge badge-top-right">
+              <span class="badge-icon">⚡</span>
+              <span class="badge-text">Newton School of Technology</span>
+            </div>
+
+            <div class="photo-floating-badge badge-bottom-left">
+              <span class="badge-icon">🏀</span>
+              <span class="badge-text">State Basketball Player</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right / Main: Name, Aesthetic Title, Bio & Quick Actions -->
+        <div class="hero-text-wrapper">
+          <div class="hero-eyebrow">
+            <span class="sparkle-icon">✦</span>
+            <span>HELLO WORLD, WELCOME TO MY SPACE</span>
+          </div>
+
+          <!-- Bold Stylish Name -->
+          <h1 class="hero-name">
+            I'M <span class="gradient-text glow-text">NIKHIL</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            <span class="role-badge">Newton School of Technology, Pune</span>
+            <span class="role-badge sports-pill-badge">🏀 State Basketball Player</span>
+            <span class="role-badge">Aspiring Developer</span>
+          </h2>
+
+          <p class="hero-description">
+            First-year B.Tech student at <strong>Newton School of Technology, Pune</strong> and a competitive <strong>State-Level Basketball Player</strong>. Passionate about solving problems through code, mastering CS fundamentals, and competing with athletic discipline.
+          </p>
+
+          <!-- Quick Stats Counter -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">1<sup class="stat-sup">st</sup></span>
+              <span class="stat-label">Year B.Tech (NST Pune)</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number basketball-stat">State</span>
+              <span class="stat-label">Basketball Player</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Coding Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Dedication</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#education" class="cta-btn primary-btn">
+              <span>Explore My Journey</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#sports" class="cta-btn basketball-btn">
+              <span>Basketball & Sports 🏀</span>
+            </a>
+            <a href="#contact" class="cta-btn outline-btn">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#education" class="scroll-indicator" aria-label="Scroll to Education section">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </div>
+      </a>
+    </section>
+
+    <!-- ===================================================================
+         3. EDUCATIONAL INFORMATION SECTION
+         =================================================================== -->
+    <section class="content-section" id="education">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="tag-icon">🎓</span>
+          <span>ACADEMIC FOUNDATION</span>
+        </div>
+        <h2 class="section-title">Educational Information</h2>
+        <p class="section-subtitle">
+          My academic pathway from foundational schooling in Tirupati to engineering studies in Pune.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        
+        <!-- Timeline Item 1: College (Newton School of Technology, Pune) -->
+        <div class="timeline-item current-timeline">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-pulse"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-meta">
+              <span class="meta-badge current-badge">2024 - 2028 • Currently in 1st Year B.Tech</span>
+              <span class="meta-grade">Active • Pune, Maharashtra</span>
+            </div>
+            <h3 class="card-heading">Bachelor of Technology (B.Tech) - Computer Science & AI</h3>
+            <h4 class="card-institution">Newton School of Technology, Pune</h4>
+            <p class="card-body-text">
+              Pursuing hands-on undergraduate engineering studies at Newton School of Technology, Pune. Diving deep into modern programming in C & Python, core algorithmic thinking, data structures, discrete mathematics, and computer architectures.
+            </p>
+            <div class="pill-tags">
+              <span class="pill-tag">Newton School of Tech</span>
+              <span class="pill-tag">C Programming</span>
+              <span class="pill-tag">Python & Problem Solving</span>
+              <span class="pill-tag">Data Structures Intro</span>
+              <span class="pill-tag">Discrete Mathematics</span>
+              <span class="pill-tag">Digital Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: Intermediate (BVB Tirupati) -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-meta">
+              <span class="meta-badge">2022 - 2024 • Intermediate (Class XI & XII)</span>
+              <span class="meta-grade">Tirupati, Andhra Pradesh</span>
+            </div>
+            <h3 class="card-heading">Intermediate Education (Class XII - MPC)</h3>
+            <h4 class="card-institution">Bharatiya Vidya Bhavan (BVB), Tirupati</h4>
+            <p class="card-body-text">
+              Completed Intermediate MPC (Mathematics, Physics, Chemistry) with distinction at BVB Tirupati. Cultivated strong analytical foundations while actively competing in state-level basketball tournaments and inter-school sports.
+            </p>
+            <div class="pill-tags">
+              <span class="pill-tag">BVB Tirupati</span>
+              <span class="pill-tag">Mathematics</span>
+              <span class="pill-tag">Physics</span>
+              <span class="pill-tag">Chemistry</span>
+              <span class="pill-tag">State Basketball</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: School (BVB Tirupati) -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-meta">
+              <span class="meta-badge">2021 - 2022 • High School (Class X)</span>
+              <span class="meta-grade">Tirupati, Andhra Pradesh</span>
+            </div>
+            <h3 class="card-heading">Secondary School Examination (Class X)</h3>
+            <h4 class="card-institution">Bharatiya Vidya Bhavan (BVB), Tirupati</h4>
+            <p class="card-body-text">
+              Completed Class X schooling with high academic merit at Bharatiya Vidya Bhavan (BVB), Tirupati. Recognized for leadership, balanced academic excellence, and representing the school in competitive athletic meets.
+            </p>
+            <div class="pill-tags">
+              <span class="pill-tag">BVB Tirupati</span>
+              <span class="pill-tag">General Science</span>
+              <span class="pill-tag">Mathematics</span>
+              <span class="pill-tag">Social Sciences</span>
+              <span class="pill-tag">Athletic Excellence</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         4. GENERAL & ACADEMIC ACHIEVEMENTS SECTION
+         =================================================================== -->
+    <section class="content-section" id="achievements">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="tag-icon">⭐</span>
+          <span>RECOGNITION & HONORS</span>
+        </div>
+        <h2 class="section-title">Achievements & Milestones</h2>
+        <p class="section-subtitle">
+          Key recognitions spanning competitive exams, hackathons, academic excellence, and leadership.
+        </p>
+      </div>
+
+      <div class="grid-cards-container">
+        
+        <!-- Achievement 1 -->
+        <div class="aesthetic-card achievement-card">
+          <div class="card-icon-badge gold-badge">🏆</div>
+          <div class="card-content">
+            <span class="card-label">Freshman Level</span>
+            <h3 class="card-title">First-Year Coding Hackathon Finalist</h3>
+            <p class="card-desc">
+              Ranked among top 10 freshman teams in college-wide 24-hour coding competition by creating an interactive student utility web app.
+            </p>
+            <div class="card-footer-meta">
+              <span>College Tech Fest</span>
+              <span>•</span>
+              <span class="badge-status">Top 10 Finalist</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement 2 -->
+        <div class="aesthetic-card achievement-card">
+          <div class="card-icon-badge purple-badge">🏅</div>
+          <div class="card-content">
+            <span class="card-label">Olympiad & Aptitude</span>
+            <h3 class="card-title">National Science & Math Olympiad - Merit Rank</h3>
+            <p class="card-desc">
+              Awarded Certificate of Merit and School Gold Medal for outstanding logical reasoning and problem solving in state and national rounds.
+            </p>
+            <div class="card-footer-meta">
+              <span>National Level</span>
+              <span>•</span>
+              <span class="badge-status">Gold Medalist</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement 3 -->
+        <div class="aesthetic-card achievement-card">
+          <div class="card-icon-badge cyan-badge">📜</div>
+          <div class="card-content">
+            <span class="card-label">Certification</span>
+            <h3 class="card-title">Foundations of Responsive Web Development</h3>
+            <p class="card-desc">
+              Completed comprehensive training in modern HTML5, CSS3 Grid/Flexbox, UI layout design, and responsive cross-platform web standards.
+            </p>
+            <div class="card-footer-meta">
+              <span>Web Standards</span>
+              <span>•</span>
+              <span class="badge-status">Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement 4 -->
+        <div class="aesthetic-card achievement-card">
+          <div class="card-icon-badge blue-badge">🎓</div>
+          <div class="card-content">
+            <span class="card-label">Academic Distinction</span>
+            <h3 class="card-title">School Academic Excellence Award</h3>
+            <p class="card-desc">
+              Consecutive recipient of the Principal’s Honor Roll for maintaining top percentile academic rankings and peer mentoring.
+            </p>
+            <div class="card-footer-meta">
+              <span>High School</span>
+              <span>•</span>
+              <span class="badge-status">Honors Roll</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement 5 -->
+        <div class="aesthetic-card achievement-card">
+          <div class="card-icon-badge gold-badge">💡</div>
+          <div class="card-content">
+            <span class="card-label">Innovation</span>
+            <h3 class="card-title">Best Science & Technology Exhibition Project</h3>
+            <p class="card-desc">
+              Built a working prototype of an automated energy-saving system utilizing sensors and basic circuit logic for the inter-school science fair.
+            </p>
+            <div class="card-footer-meta">
+              <span>Exhibition</span>
+              <span>•</span>
+              <span class="badge-status">1st Place</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement 6 -->
+        <div class="aesthetic-card achievement-card">
+          <div class="card-icon-badge purple-badge">🤝</div>
+          <div class="card-content">
+            <span class="card-label">Leadership</span>
+            <h3 class="card-title">Student Council & Sports Coordinator</h3>
+            <p class="card-desc">
+              Elected to coordinate intra-school sports events, leading logistic arrangements and team management for over 400 student participants.
+            </p>
+            <div class="card-footer-meta">
+              <span>Leadership</span>
+              <span>•</span>
+              <span class="badge-status">Coordinator</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         5. SPORTS ACHIEVEMENTS SECTION (Dedicated Highlight)
+         =================================================================== -->
+    <section class="content-section sports-section" id="sports">
+      <div class="sports-ambient-glow"></div>
+
+      <div class="section-header">
+        <div class="section-tag sports-tag">
+          <span class="tag-icon">🥇</span>
+          <span>ATHLETIC EXCELLENCE & DISCIPLINE</span>
+        </div>
+        <h2 class="section-title">Sports Achievements</h2>
+        <p class="section-subtitle">
+          Athletics is central to my life. It has taught me grit, speed, tactical thinking under pressure, and the power of true teamwork.
+        </p>
+      </div>
+
+      <!-- Sports Showcase Bento Grid -->
+      <div class="sports-bento-grid">
+        
+        <!-- Big Feature Card: State Level Basketball Player -->
+        <div class="sports-card sports-feature-card basketball-feature-card">
+          <div class="sports-card-badge">✦ Signature Sport & State Honor</div>
+          <div class="sports-icon-hero">🏀⚡</div>
+          <h3 class="sports-title">State-Level Basketball Player</h3>
+          <p class="sports-discipline">Playmaker & Floor General • State Championship Tournament</p>
+          <p class="sports-text">
+            Competed at the prestigious State-Level Basketball Championship representing school and regional teams. Known for high-speed transition offense, perimeter shooting, high basketball IQ, lock-down defensive positioning, and commanding on-court communication under tight game-clock pressure.
+          </p>
+          <div class="sports-stat-pills">
+            <span class="sport-stat basketball-pill">🏀 State-Level Athlete</span>
+            <span class="sport-stat basketball-pill">⚡ Starting 5 / Playmaker</span>
+            <span class="sport-stat basketball-pill">🎯 Clutch Perimeter Shooting</span>
+            <span class="sport-stat basketball-pill">🏆 Multi-Tournament Trophies</span>
+          </div>
+        </div>
+
+        <!-- Sports Card 2: Sprinting & Athletics -->
+        <div class="sports-card">
+          <div class="sports-icon-hero">🏃💨</div>
+          <h3 class="sports-title">Athletics & Sprint Podium</h3>
+          <p class="sports-discipline">100m Sprint & 4x100m Relay Speed</p>
+          <p class="sports-text">
+            Explosive fast-break basketball conditioning translated directly into track podium finishes in 100m and relay events across inter-school and college meets.
+          </p>
+          <div class="sports-stat-pills">
+            <span class="sport-stat">🥇 Sprint Medalist</span>
+            <span class="sport-stat">⚡ Explosive Agility</span>
+          </div>
+        </div>
+
+        <!-- Sports Card 3: Racket Sports (Badminton) -->
+        <div class="sports-card">
+          <div class="sports-icon-hero">🏸</div>
+          <h3 class="sports-title">Badminton Competitor</h3>
+          <p class="sports-discipline">Singles & Doubles Agility</p>
+          <p class="sports-text">
+            Active competitor in badminton tournaments, sharpening lightning-fast reflexes, court lateral footwork, wrist control, and intense focus.
+          </p>
+          <div class="sports-stat-pills">
+            <span class="sport-stat">🥈 Tournament Finalist</span>
+            <span class="sport-stat">🎯 Reflexes & Stamina</span>
+          </div>
+        </div>
+
+        <!-- Sports Card 4: Marathon & Fitness -->
+        <div class="sports-card">
+          <div class="sports-icon-hero">🏅</div>
+          <h3 class="sports-title">Campus 10K Marathon & Fitness</h3>
+          <p class="sports-discipline">Endurance, Calisthenics & Gym</p>
+          <p class="sports-text">
+            Completed the university 10-kilometer fitness marathon with top percentile finish. Dedicated to daily conditioning, vertical leap training, and core strength.
+          </p>
+          <div class="sports-stat-pills">
+            <span class="sport-stat">⏱️ Top 5% Finish</span>
+            <span class="sport-stat">💪 Daily Conditioning</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sports Quote / Philosophy Banner -->
+      <div class="sports-philosophy-card">
+        <div class="quote-symbol">“</div>
+        <p class="quote-text">
+          Basketball taught me what no classroom ever could: how to stay composed when down two points with ten seconds on the clock, how to trust your teammates completely, and how to execute with relentless intensity.
+        </p>
+        <span class="quote-author">— Nikhil • Newton School of Technology & State-Level Basketball Player</span>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         6. SKILLS SECTION (Technical + Soft + Athletic)
+         =================================================================== -->
+    <section class="content-section" id="skills">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="tag-icon">⚡</span>
+          <span>CAPABILITIES & ARSENAL</span>
+        </div>
+        <h2 class="section-title">Skills & Proficiencies</h2>
+        <p class="section-subtitle">
+          Technologies I am actively practicing alongside interpersonal strengths honed on sports fields and team projects.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Skill Category 1: Programming Languages -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon">💻</span>
+            <div>
+              <h3 class="cat-title">Programming Languages</h3>
+              <span class="cat-desc">Core problem solving & logic</span>
+            </div>
+          </div>
+          
+          <div class="skill-bars-list">
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name">C Language (College Core)</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name">C++ & OOP Concepts</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 75%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name">Python (Scripting & Automation)</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 70%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript (Web Fundamentals)</span>
+                <span class="skill-pct">65%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 65%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Category 2: Web & Frontend -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon">🎨</span>
+            <div>
+              <h3 class="cat-title">Web & Frontend Design</h3>
+              <span class="cat-desc">Modern responsive styling & UI</span>
+            </div>
+          </div>
+
+          <div class="skill-bars-list">
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML5 Semantic Structure</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name">CSS3 (Grid, Flexbox, Animations)</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name">Responsive & Mobile-First UI</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span class="skill-name">Glassmorphism & Aesthetic Styling</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Category 3: Developer Tools -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon">🛠️</span>
+            <div>
+              <h3 class="cat-title">Tools & Development Workflow</h3>
+              <span class="cat-desc">Version control & developer environment</span>
+            </div>
+          </div>
+
+          <div class="tools-tag-cloud">
+            <div class="tool-chip"><span class="chip-dot"></span>Git & GitHub</div>
+            <div class="tool-chip"><span class="chip-dot"></span>VS Code</div>
+            <div class="tool-chip"><span class="chip-dot"></span>Terminal / Bash</div>
+            <div class="tool-chip"><span class="chip-dot"></span>Chrome DevTools</div>
+            <div class="tool-chip"><span class="chip-dot"></span>GCC / Clang Compiler</div>
+            <div class="tool-chip"><span class="chip-dot"></span>Figma (UI Wireframing)</div>
+            <div class="tool-chip"><span class="chip-dot"></span>Markdown Documentation</div>
+            <div class="tool-chip"><span class="chip-dot"></span>Command Line Scripting</div>
+          </div>
+        </div>
+
+        <!-- Skill Category 4: Athletic & Leadership Qualities -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="cat-icon">🏆</span>
+            <div>
+              <h3 class="cat-title">Athletic & Soft Skills</h3>
+              <span class="cat-desc">Transferable leadership & mindset</span>
+            </div>
+          </div>
+
+          <div class="tools-tag-cloud soft-skills-cloud">
+            <div class="tool-chip gold-chip">Team Captaincy & Communication</div>
+            <div class="tool-chip gold-chip">High-Pressure Focus</div>
+            <div class="tool-chip gold-chip">Relentless Consistency</div>
+            <div class="tool-chip gold-chip">Quick Adaptability</div>
+            <div class="tool-chip gold-chip">Critical Analytical Thinking</div>
+            <div class="tool-chip gold-chip">Time Management (Academics + Sports)</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         7. PROJECTS SECTION
+         =================================================================== -->
+    <section class="content-section" id="projects">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="tag-icon">🚀</span>
+          <span>CREATIVE PORTFOLIO</span>
+        </div>
+        <h2 class="section-title">Projects & Creations</h2>
+        <p class="section-subtitle">
+          Hands-on projects created during my first year to apply theory into usable, interactive software.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: Personal Portfolio -->
+        <div class="project-card">
+          <div class="project-preview-box">
+            <div class="preview-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="preview-url">nikhil-portfolio.dev</span>
+            </div>
+            <div class="preview-visual portfolio-visual">
+              <div class="mini-hero">
+                <span class="mini-avatar">✦</span>
+                <span class="mini-text">Nikhil Portfolio</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-details">
+            <div class="project-tags">
+              <span class="tag-badge">HTML5</span>
+              <span class="tag-badge">CSS3 Modern</span>
+              <span class="tag-badge">Animations</span>
+            </div>
+            <h3 class="project-name">Aesthetic Personal Portfolio Website</h3>
+            <p class="project-desc">
+              A high-end, responsive single-page personal portfolio featuring an interactive opening gate animation, neon glassmorphism aesthetic, and modular sections.
+            </p>
+            <div class="project-links">
+              <a href="#hero" class="project-btn demo-btn">Current Live Site ↗</a>
+              <a href="#top" class="project-btn code-btn">HTML & CSS</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Student CGPA & Attendance Calculator -->
+        <div class="project-card">
+          <div class="project-preview-box">
+            <div class="preview-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="preview-url">grade-tracker.py</span>
+            </div>
+            <div class="preview-visual python-visual">
+              <div class="terminal-text">
+                <code>$ python tracker.py</code><br/>
+                <code class="green-text">&gt; Current SGPA: 9.12</code><br/>
+                <code class="cyan-text">&gt; Attendance Status: Safe (84%)</code>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-details">
+            <div class="project-tags">
+              <span class="tag-badge">Python</span>
+              <span class="tag-badge">C++ Logic</span>
+              <span class="tag-badge">CLI Tool</span>
+            </div>
+            <h3 class="project-name">Student CGPA & Attendance Tracker</h3>
+            <p class="project-desc">
+              A specialized utility for college freshmen to project semester grades based on credit hours and track remaining bunkable classes before hitting the 75% attendance criteria.
+            </p>
+            <div class="project-links">
+              <a href="#contact" class="project-btn demo-btn">Request Code ↗</a>
+              <span class="project-status">Completed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Interactive Study & Quiz Portal -->
+        <div class="project-card">
+          <div class="project-preview-box">
+            <div class="preview-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="preview-url">quiz-hub.web</span>
+            </div>
+            <div class="preview-visual quiz-visual">
+              <div class="quiz-card-mockup">
+                <span class="quiz-q">Question 04/10</span>
+                <span class="quiz-choice correct">✓ Option A: Correct Answer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-details">
+            <div class="project-tags">
+              <span class="tag-badge">HTML</span>
+              <span class="tag-badge">CSS Grid</span>
+              <span class="tag-badge">JavaScript</span>
+            </div>
+            <h3 class="project-name">Interactive Freshman CS Quiz Portal</h3>
+            <p class="project-desc">
+              Web-based self-assessment tool allowing first-year classmates to practice multiple-choice questions on C programming, binary logic, and basic hardware architectures.
+            </p>
+            <div class="project-links">
+              <a href="#contact" class="project-btn demo-btn">View Demo ↗</a>
+              <span class="project-status">Completed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Sports Tournament Scoreboard -->
+        <div class="project-card">
+          <div class="project-preview-box">
+            <div class="preview-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="preview-url">score-pulse.app</span>
+            </div>
+            <div class="preview-visual sports-visual">
+              <div class="scoreboard-mockup">
+                <div class="team-badge">TEAM RED: 24</div>
+                <div class="vs-text">VS</div>
+                <div class="team-badge">TEAM BLUE: 21</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-details">
+            <div class="project-tags">
+              <span class="tag-badge">HTML5</span>
+              <span class="tag-badge">CSS Animations</span>
+              <span class="tag-badge">Sports UI</span>
+            </div>
+            <h3 class="project-name">Tournament Scoreboard & Match Clock</h3>
+            <p class="project-desc">
+              Digital match scoring interface designed for college intramural sports (badminton & football matches) with period clocks, foul counters, and set trackers.
+            </p>
+            <div class="project-links">
+              <a href="#contact" class="project-btn demo-btn">View Demo ↗</a>
+              <span class="project-status">Completed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         8. CONTACT & FOOTER SECTION
+         =================================================================== -->
+    <section class="content-section contact-section" id="contact">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="tag-icon">📫</span>
+          <span>GET IN TOUCH</span>
+        </div>
+        <h2 class="section-title">Let's Connect & Collaborate</h2>
+        <p class="section-subtitle">
+          Whether you want to discuss tech, collaborate on a student project, or organize a sports match — my inbox is always open!
+        </p>
+      </div>
+
+      <div class="contact-container">
+        
+        <!-- Contact Cards Column -->
+        <div class="contact-cards-col">
+          
+          <!-- Email Card -->
+          <a href="mailto:nikhilreddychirra200808@gmail.com" class="contact-card email-card">
+            <div class="contact-card-icon">✉️</div>
+            <div class="contact-card-info">
+              <span class="contact-label">Email Me</span>
+              <span class="contact-value">nikhilreddychirra200808@gmail.com</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- Instagram Card -->
+          <a href="https://instagram.com/nikhil_nickel_" target="_blank" rel="noopener noreferrer" class="contact-card insta-card">
+            <div class="contact-card-icon">📸</div>
+            <div class="contact-card-info">
+              <span class="contact-label">Instagram</span>
+              <span class="contact-value">@nikhil_nickel_</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-card-icon">💼</div>
+            <div class="contact-card-info">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">Connect on LinkedIn</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-card-icon">🐙</div>
+            <div class="contact-card-info">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">Explore Repositories</span>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- Status / Availability Card -->
+          <div class="contact-card status-card">
+            <div class="contact-card-icon">🟢</div>
+            <div class="contact-card-info">
+              <span class="contact-label">Current College & Status</span>
+              <span class="contact-value">Newton School of Technology, Pune • Open for Collabs</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact Form Column -->
+        <div class="contact-form-col">
+          <form class="aesthetic-form" onsubmit="event.preventDefault(); alert('Thank you for reaching out! This is a demo form. Please connect via direct email or LinkedIn.');">
+            <h3 class="form-title">Send a Quick Message</h3>
+            
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" placeholder="John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" placeholder="john@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" placeholder="Project Collaboration / Quick Hello" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" rows="4" placeholder="Hi Nikhil, I saw your portfolio and would love to connect..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-divider"></div>
+        <div class="footer-content">
+          <div class="footer-left">
+            <span class="footer-name">Nikhil<span class="accent-dot">.</span></span>
+            <span class="footer-copy">© 2026. Designed with passion & precision. Single-page HTML & CSS.</span>
+          </div>
+
+          <div class="footer-right">
+            <a href="#hero" class="back-to-top-btn" title="Back to top">
+              <span>Back to Top</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+
+    </section>
+
+  </div><!-- End .portfolio-container -->
+
+  <!-- Optional helper script: auto resets scroll to top when opened -->
+  <script>
+    const toggle = document.getElementById('open-portfolio-toggle');
+    if (toggle) {
+      toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
